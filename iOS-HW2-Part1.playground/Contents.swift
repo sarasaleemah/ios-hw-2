@@ -30,9 +30,32 @@ import UIKit
  #
  اكثر من 40 -> سمنة مفرطه
 */
+var height = 1.60
+var weight = 54.0
+//var BMI : Double
+func BPRINT ( height :Double , weight : Double )
+{
+   var  BMI = (weight / pow(height, 2))
+    var oo = pow(height, 2)
+    if (BMI < 18.5 )
+    {
+        print("ضعيف")
+        
+    }else if (BMI >= 18.5 || BMI <= 30.0)
+    {
+        print("وزن طبيعي")
+        
+    }else if (BMI >= 30.1 || BMI <= 40.0)
+    {
+         print("سمنه خفيفه")
+    }else if ( BMI > 40.0)
+    {
+         print("سمنه مفرطه")
+    }
+}
 
 
-
+BPRINT(height: height, weight: weight)
 
 
 //: # 2️⃣  السؤال الثاني
@@ -52,3 +75,16 @@ import UIKit
  و اذا كان فوق ١٨ سوف يتم طباعة نص بأن المتقدم يُسمح له بإمتلاك رخصة قيادة
 */
 
+var name = "sara"
+var age = 14
+
+func test (name : String , age : Int)
+{
+    if (age >= 18){
+        print("المتقدم يسمح له بإمتلاك رخصة قيادة")
+    }else
+    {
+        print("المتقدم لم يكمل العمر المطلوب")
+    }
+}
+test(name: name, age: age)
